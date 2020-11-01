@@ -123,23 +123,24 @@ class BerlinClockTest extends TestCase
         $actual = $test->calculateBlockOfHours($timer);
         $this->assertEquals("RR",$actual);
     }
-    public function test_CalculateBlockOFHours_given15H_returnR(){
+    public function test_CalculateBlockOFHours_given15H_returnRRR(){
         $test = new BerlinClock();
         $timer="15:00:00";
         $actual = $test->calculateBlockOfHours($timer);
         $this->assertEquals("RRR",$actual);
     }
-    public function test_CalculateBlockOFHours_given20H_returnR(){
+    public function test_CalculateBlockOFHours_given20H_returnRRRR(){
         $test = new BerlinClock();
         $timer="20:00:00";
         $actual = $test->calculateBlockOfHours($timer);
         $this->assertEquals("RRRR",$actual);
     }
-    public function test_CalculateBlockOFHours_given23H_returnR(){
+
+    public function test_calculateSeconds_given0s_returnNothing(){
         $test = new BerlinClock();
-        $timer="23:00:00";
+        $timer="00:00:00";
         $actual = $test->calculateBlockOfHours($timer);
-        $this->assertEquals("RRRR",$actual);
+        $this->assertEquals("",$actual);
     }
 
 }
