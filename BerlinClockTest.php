@@ -164,4 +164,11 @@ class BerlinClockTest extends TestCase
         $this->assertEquals("",$actual);
     }
 
+    public function test_clock_given1h15m02s_returnR_R_YYR(){
+        $test = new BerlinClock();
+        $timer="01:15:02";
+        $actual = $test->clock($timer);
+        $this->assertEquals("R\n\nR\nYYR\n",$actual);
+    }
+
 }

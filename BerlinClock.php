@@ -56,4 +56,18 @@ class BerlinClock
             return "";
     }
 
+    public function clock($timer){
+        $result = "";
+        $result .= $this->calculateSeconds($timer);
+        $result .= "\n";
+        $result .= $this->calculateBlockOfHours($timer);
+        $result .= "\n";
+        $result .= $this->calculateHours($timer);
+        $result .= "\n";
+        $result .= $this->calculateBlockOfMinutes($timer);
+        $result .= "\n";
+        $result .= $this->calculateMinutes($timer);
+        return $result;
+    }
+
 }
