@@ -84,4 +84,10 @@ class BerlinClockTest extends TestCase
         $actual = $test->calculateHours($timer);
         $this->assertEquals("RR",$actual);
     }
+    public function test_CalculateHours_given13H_returnRRR(){
+        $test = new BerlinClock();
+        $timer="13:00:00";
+        $actual = $test->calculateHours($timer);
+        $this->assertEquals("RRR",$actual);
+    }
 }
