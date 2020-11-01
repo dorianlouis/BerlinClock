@@ -36,4 +36,15 @@ class BerlinClock
         }
         return $string;
     }
+    public function calculateBlockOfHours($timer){
+        $var=explode(":",$timer);
+        $hours = strval($var[0]) ;
+        $blocks = $hours/5;
+        $string ="";
+        for ($i =1; $i<=$blocks;$i++) {
+            $string .= "R";
+        }
+        return $string;
+    }
+
 }
