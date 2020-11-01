@@ -26,5 +26,14 @@ class BerlinClock
         }
         return $string;
     }
-
+    public function calculateHours($timer){
+        $var=explode(":",$timer);
+        $hours = strval($var[0]) ;
+        $mod = $hours%5;
+        $string ="";
+        for ($i =0; $i<$mod;$i++) {
+            $string .= "R";
+        }
+        return $string;
+    }
 }
